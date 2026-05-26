@@ -5,6 +5,8 @@ use App\Livewire\Admin\Dashboard;
 use App\Livewire\Admin\Users;
 use App\Livewire\Admin\Services;
 use App\Http\Controllers\EmployeeController;
+use App\Livewire\Admin\Employees;
+use App\Models\Employee;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,7 +27,7 @@ Route::get('/', function () {
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/admin', Dashboard::class)->name('admin');
-    Route::get('/admin/users', Users::class)->name('users');
+    Route::get('/admin/employees', Employees::class)->name('employees');
     Route::get('/admin/services', Services::class)->name('services');
 });
 

@@ -10,11 +10,10 @@
     @vite([
         'resources/css/app.css',
         'resources/css/admin.css',
-        'resources/js/app.js',
-        'resources/js/admin.js'
+        'resources/css/admin/services.css',
+        'resources/css/admin/employees.css',
+        'resources/js/app.js'
     ])
-
-    @stack('styles')
 
     @livewireStyles
 </head>
@@ -23,6 +22,5 @@
     {{ $slot }}
 
     @livewireScripts
-
 </body>
 </html>
