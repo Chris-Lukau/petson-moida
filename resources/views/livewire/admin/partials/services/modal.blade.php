@@ -13,6 +13,8 @@
             @endforeach
         </select>
 
+        <input type="file" wire:model="photo">
+
         <input type="text" wire:model="name" placeholder="Nome">
 
         <input type="number" wire:model="base_price" placeholder="Preço">
@@ -28,7 +30,7 @@
             Salvar
         </button>
 
-        <button wire:click="$set('showModal', false)">
+        <button wire:click="$set('showModal', false)" class="close">
             Fechar
         </button>
 

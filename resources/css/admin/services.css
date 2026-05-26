@@ -95,6 +95,11 @@ h1{
     transform:translateY(0);
 }
 
+.category{
+    opacity: 5 !important;
+    transform: translateY(10) !important;
+}
+
 .category h2{
     color:var(--verde);
     margin-bottom:20px;
@@ -154,7 +159,7 @@ button{
     padding:10px 18px;
     border-radius:10px;
     cursor:pointer;
-    color:white;
+    color:rgb(255, 255, 255);
     font-weight:600;
     transition:.3s;
 }
@@ -181,7 +186,7 @@ button{
 .modal{
     position:fixed;
     inset:0;
-    background:rgba(0,0,0,.5);
+    background:rgba(187, 231, 198, 0.5);
     display:flex;
     justify-content:center;
     align-items:center;
@@ -189,7 +194,7 @@ button{
 }
 
 .modal-box{
-    background:white;
+    background:rgb(255, 255, 255);
     padding:30px;
     width:95%;
     max-width:450px;
@@ -208,18 +213,25 @@ button{
     }
 }
 
+/* bordas dos campos do modal */
 .modal-box input,
 .modal-box select{
     width:100%;
     padding:14px;
     margin-bottom:15px;
-    border:1px solid #ddd;
+    border:1px solid #cbe0c3;
     border-radius:10px;
 }
 
 .save{
     width:100%;
     background:var(--verde);
+}
+
+.close{
+    width:30%;
+    margin-top: 5%;
+    background: #d32f2f;
 }
 
 .save:hover{
