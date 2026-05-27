@@ -4,8 +4,6 @@
 
     <main class="main">
 
-        {{-- @include('livewire.admin.partials.topbar') --}}
-
         @include('livewire.admin.partials.employees.top')
 
         @include('livewire.admin.partials.employees.filters')
@@ -16,3 +14,11 @@
 
     </main>
 </div>
+
+{{-- Bloco para exibir mensagens flash --}}
+@if(session()->has('message'))
+    <div class="alert alert-success">{{ session('message') }}</div>
+@endif
+@if(session()->has('error'))
+    <div class="alert alert-danger">{{ session('error') }}</div>
+@endif

@@ -251,7 +251,7 @@ width:100%;
             <td>{{ $employee->bi_number }}</td>
             <td>{{ $employee->gender }}</td>
             <td>{{ $employee->address }}</td>
-            <td>{{ $employee->service }}</td>
+            <td>{{ $employee->service?->name }}</td>
 
             <td>
 

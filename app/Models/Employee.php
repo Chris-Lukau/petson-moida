@@ -12,6 +12,12 @@ class Employee extends Model
         'bi_number',
         'gender',
         'address',
-        'service'
+        'service_id'
     ];
+
+    // Adicionar o relacionamento
+    public function service()
+    {
+        return $this->belongsTo(Service::class);
+    }
 }
