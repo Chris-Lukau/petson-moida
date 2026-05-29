@@ -18,19 +18,19 @@
                 PETSON MOIDA
             </h1>
 
-            <div>
+            {{-- <div>
                 @auth
-                    {{-- <a href="{{ route('login') }}"
+                    <a href="{{ route('login') }}"
                        class="bg-white text-green-700 px-5 py-2 rounded-lg font-semibold hover:bg-gray-100">
                         LOGIN
-                    </a> --}}
+                    </a>
                 @else
                     <a href="{{ route('login') }}"
                        class="bg-white text-green-700 px-5 py-2 rounded-lg font-semibold hover:bg-gray-100">
                         Login
                     </a>
                 @endauth
-            </div>
+            </div> --}}
 
         </div>
     </nav>

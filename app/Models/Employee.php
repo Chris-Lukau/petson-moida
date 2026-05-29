@@ -7,15 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 class Employee extends Model
 {
     protected $fillable = [
-        'full_name',
+        'name',
         'phone',
         'bi_number',
         'gender',
-        'address',
         'service_id'
     ];
 
-    // Adicionar o relacionamento
     public function service()
     {
         return $this->belongsTo(Service::class);

@@ -31,7 +31,7 @@ class Employees extends Component
             'name'       => 'required|string|min:3|max:255',
             'phone' => [
     'required',
-    'regex:/^\+244\s9\d{2}\s\d{3}\s\d{3}$/',
+    'regex:/^\+244\d{9}$/',
     'unique:employees,phone,' . $this->employee_id
 ],
 
@@ -95,30 +95,36 @@ class Employees extends Component
 
     // Salvar (criar ou actualizar)
     public function save()
-    {
-        $validatedData = $this->validate();  // lança excepção automática em caso de erro
+{
+    $validatedData = $this->validate();
 
-        try {
-            Employee::updateOrCreate(
-                ['id' => $this->employee_id],
-                [
-                    'name'       => $validatedData['name'],
-                    'phone'      => $validatedData['phone'],
-                    'bi_number' => $validatedData['bi'],
-                    'gender'     => $validatedData['gender'],
-                    'service_id' => $validatedData['service_id'],
-                ]
-            );
+    try {
 
-            $this->resetForm();
-            $this->showModal = false;
+        Employee::updateOrCreate(
+            ['id' => $this->employee_id],
+            [
+                'name'       => $validatedData['name'],
+                'phone'      => $validatedData['phone'],
+                'bi_number'  => $validatedData['bi'],
+                'gender'     => $validatedData['gender'],
+                'service_id' => $validatedData['service_id'],
+            ]
+        );
 
-            // Mensagem de sucesso (podes exibir num toast ou num alerta)
-            session()->flash('message', 'Funcionário salvo com sucesso.');
-        } catch (\Exception $e) {
-            session()->flash('error', 'Erro ao salvar: ' . $e->getMessage());
-        }
+        $this->resetForm();
+
+        $this->showModal = false;
+
+        session()->flash(
+            'message',
+            'Funcionário salvo com sucesso.'
+        );
+
+    } catch (\Exception $e) {
+
+        dd($e->getMessage());
     }
+}
 
     // Eliminar
     public function delete($id)
