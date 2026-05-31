@@ -4,10 +4,15 @@ use Illuminate\Support\Facades\Route;
 use App\Livewire\Admin\Dashboard;
 use App\Livewire\Admin\Users;
 use App\Livewire\Admin\Services;
+use App\Http\Controllers\ResidentController;
 use App\Http\Controllers\EmployeeController;
 use App\Livewire\Admin\Employees;
-use App\Models\Employee;
+use App\Http\Controllers\SiteController;
 
+
+
+Route::get('/', [SiteController::class, 'home'])
+    ->name('site.home');
 /*
 |--------------------------------------------------------------------------
 | Public routes
@@ -17,6 +22,7 @@ use App\Models\Employee;
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
+
 
 
 /*

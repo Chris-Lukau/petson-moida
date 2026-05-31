@@ -4,7 +4,7 @@ namespace App\Livewire\Admin;
 
 use Livewire\Component;
 use Livewire\WithPagination;
-use App\Models\Residence;
+use App\Models\Resident;
 
 class Dashboard extends Component
 {
@@ -17,14 +17,14 @@ class Dashboard extends Component
 
     public function mount()
     {
-        $this->totalUsuarios = Residence::count();
+        $this->totalUsuarios = Resident::count();
         $this->totalEnderecos =
-            Residence::distinct('endereco')->count('endereco');
+            Resident::distinct('endereco')->count('endereco');
     }
 
     public function render()
     {
-        $query = Residence::query();
+        $query = Resident::query();
 
         if ($this->search) {
             $query->where('nome_completo', 'like', '%' . $this->search . '%');
@@ -36,7 +36,7 @@ class Dashboard extends Component
 
         return view('livewire.admin.dashboard', [
             'usuarios' => $query->paginate(50),
-            'enderecos' => Residence::select('endereco')
+            'enderecos' => Resident::select('endereco')
                 ->distinct()
                 ->pluck('endereco')
         ])->layout('components.layouts.admin');
