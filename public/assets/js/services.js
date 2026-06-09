@@ -1,14 +1,56 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    const categoryFilter = document.getElementById('categoryFilter');
-    const serviceSearch = document.getElementById('serviceSearch');
+    const searchInput =
+        document.getElementById('serviceSearch');
 
-    if(!categoryFilter || !serviceSearch) return;
+    const categoryFilter =
+        document.getElementById('categoryFilter');
 
-    serviceSearch.addEventListener('input', () => {
+    const cards =
+        document.querySelectorAll('.service-card');
 
-        console.log('Pesquisar:', serviceSearch.value);
+    if (!searchInput || !categoryFilter) return;
 
-    });
+    function filterServices() {
+
+        const search =
+            searchInput.value.toLowerCase();
+
+        const category =
+            categoryFilter.value;
+
+        cards.forEach(card => {
+
+            const name =
+                card.dataset.name;
+
+            const cardCategory =
+                card.dataset.category;
+
+            const matchName =
+                name.includes(search);
+
+            const matchCategory =
+                category === '' ||
+                cardCategory === category;
+
+            card.style.display =
+                matchName && matchCategory
+                    ? ''
+                    : 'none';
+
+        });
+
+    }
+
+    searchInput.addEventListener(
+        'input',
+        filterServices
+    );
+
+    categoryFilter.addEventListener(
+        'change',
+        filterServices
+    );
 
 });

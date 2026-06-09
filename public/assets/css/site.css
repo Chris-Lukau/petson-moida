@@ -319,6 +319,58 @@
   width: 100%;
 }
 
+/* ================= CARDS DE SERVIÇOS ================= */
+
+.service-card {
+    background: #fff;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    transition: .4s;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,.15);
+}
+
+/* PADRONIZAÇÃO DAS IMAGENS */
+.service-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.service-card:hover img {
+    transform: scale(1.05);
+    transition: .4s;
+}
+
+.service-card h3 {
+    padding: 20px 20px 10px;
+    color: var(--verde);
+}
+
+.service-card p {
+    padding: 0 20px;
+    color: #666;
+}
+
+.service-card span {
+    padding: 10px 20px;
+    font-weight: 600;
+    color: var(--laranja);
+}
+
+.service-card button {
+    margin: auto 20px 20px;
+}
+
 /* Card */
 .servicos .card {
   width: 100%;
