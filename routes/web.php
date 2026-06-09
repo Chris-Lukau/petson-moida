@@ -11,7 +11,7 @@ use App\Http\Controllers\SiteController;
 
 
 
-Route::get('/', [SiteController::class, 'home'])
+Route::get('/site', [SiteController::class, 'home'])
     ->name('site.home');
 /*
 |--------------------------------------------------------------------------
