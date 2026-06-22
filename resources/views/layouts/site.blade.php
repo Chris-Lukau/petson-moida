@@ -49,6 +49,8 @@
 
     <script src="{{ asset('assets/js/site.js') }}"></script>
 
+    <script src="{{ asset('assets/js/register.js') }}"></script>
+
 </body>
 
 </html>

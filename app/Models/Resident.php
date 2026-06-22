@@ -10,6 +10,16 @@ class Resident extends Model
         'nome_completo',
         'telefone',
         'genero',
-        'endereco'
+        'provincia',
+        'municipio',
+        'bairro',
+        'endereco',
+        'zona',
+        'latitude',
+        'longitude',
+        'referencia',
+        'email',
+        'password',
+        'active'
     ];
 }

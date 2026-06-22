@@ -1,3 +1,5 @@
+<meta name="csrf-token" content="{{ csrf_token() }}">
+
 @extends('layouts.site')
 
 @section('title', 'Petson Moída')
@@ -25,3 +27,4 @@
 @include('site.partials.footer')
 
 @endsection
+

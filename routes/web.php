@@ -23,6 +23,8 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
+Route::post('/resident/register', [ResidentController::class, 'store'])
+    ->name('resident.register');
 
 
 /*
@@ -43,4 +45,4 @@ Route::middleware(['auth'])->group(function () {
 | Authentication routes (Laravel Breeze)
 |--------------------------------------------------------------------------
 */
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

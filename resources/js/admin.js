@@ -2,42 +2,42 @@
 
   // ================= DADOS =================
 
-  const usuarios = [
-    {
-      nome:'Carlos Mendes',
-      telefone:'+244 923 000 111',
-      genero:'Masculino',
-      endereco:'Luanda'
-    },
+  // const usuarios = [
+  //   {
+  //     nome:'Carlos Mendes',
+  //     telefone:'+244 923 000 111',
+  //     genero:'Masculino',
+  //     endereco:'Luanda'
+  //   },
 
-    {
-      nome:'Ana Paula',
-      telefone:'+244 945 000 222',
-      genero:'Feminino',
-      endereco:'Benguela'
-    },
+  //   {
+  //     nome:'Ana Paula',
+  //     telefone:'+244 945 000 222',
+  //     genero:'Feminino',
+  //     endereco:'Benguela'
+  //   },
 
-    {
-      nome:'João Victor',
-      telefone:'+244 932 000 333',
-      genero:'Masculino',
-      endereco:'Huambo'
-    },
+  //   {
+  //     nome:'João Victor',
+  //     telefone:'+244 932 000 333',
+  //     genero:'Masculino',
+  //     endereco:'Huambo'
+  //   },
 
-    {
-      nome:'Mariana Costa',
-      telefone:'+244 956 000 444',
-      genero:'Feminino',
-      endereco:'Luanda'
-    },
+  //   {
+  //     nome:'Mariana Costa',
+  //     telefone:'+244 956 000 444',
+  //     genero:'Feminino',
+  //     endereco:'Luanda'
+  //   },
 
-    {
-      nome:'Pedro Miguel',
-      telefone:'+244 991 000 555',
-      genero:'Masculino',
-      endereco:'Lubango'
-    }
-  ];
+  //   {
+  //     nome:'Pedro Miguel',
+  //     telefone:'+244 991 000 555',
+  //     genero:'Masculino',
+  //     endereco:'Lubango'
+  //   }
+  // ];
 
   // ================= ELEMENTOS =================
 

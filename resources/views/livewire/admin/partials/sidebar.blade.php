@@ -5,5 +5,6 @@
         <a href="{{ route('admin') }}" class="active">Home</a>
         <a href="{{ route('employees') }}">Funcionários</a>
         <a href="{{ route('services') }}">Serviços</a>
+        {{-- <a href="{{ route('resident.register') }}">Usuários</a> --}}
     </nav>
 </aside>
